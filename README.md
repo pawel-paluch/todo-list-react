@@ -2,6 +2,8 @@
 
 This project demonstrates the visual aspects of a to-do list application without any interactivity or functionality to add, edit, or remove tasks.
 
+![alt text for screen readers](./public/img/screen.jpg "Homepage")
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
