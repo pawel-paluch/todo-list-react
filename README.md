@@ -4,6 +4,9 @@ This project demonstrates the visual aspects of a to-do list application without
 
 ![alt text for screen readers](./public/img/screen.jpg "Homepage")
 
+## Demo
+[See the project](https://pawel-paluch.github.io/todo-list-react/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
