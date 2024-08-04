@@ -2,6 +2,14 @@
 
 This project demonstrates the visual aspects of a to-do list application without any interactivity or functionality to add, edit, or remove tasks.
 
+ The technologies used are: 
+ - HTML;
+ - CSS;
+ - BEM;
+ - JavaScript;
+ - React;
+ - JSX
+
 ![alt text for screen readers](./public/img/screen.jpg "Homepage")
 
 ## Demo
