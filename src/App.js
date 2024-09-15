@@ -6,12 +6,15 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+// Stała z przykładowymi zadaniami
+const defaultTasks = [
+    { id: 1, content: "przejść na reacta", done: false },
+    { id: 2, content: "wyjść na spacer z psem", done: true },
+];
+
 function App() {
     const [hideDone, setHideDone] = useState(false);
-    const [tasks, setTasks] = useState([
-        { id: 1, content: "przejść na reacta", done: false },
-        { id: 2, content: "wyjść na spacer z psem", done: true },
-    ]);
+    const [tasks, setTasks] = useState(defaultTasks);
 
     const toggleHideDone = () => {
         setHideDone(hideDone => !hideDone);
@@ -26,10 +29,9 @@ function App() {
             if (task.id === id) {
                 return { ...task, done: !task.done };
             }
-
             return task;
         }));
-    }
+    };
 
     const setAllDone = () => {
         setTasks(tasks => tasks.map(task => ({
@@ -65,7 +67,6 @@ function App() {
                         hideDone={hideDone}
                         removeTask={removeTask}
                         toggleTaskDone={toggleTaskDone}
-
                     />
                 }
                 extraHeaderContent={
