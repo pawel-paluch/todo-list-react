@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -6,15 +6,21 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-// Stała z przykładowymi zadaniami
-const defaultTasks = [
-    { id: 1, content: "przejść na reacta", done: false },
-    { id: 2, content: "wyjść na spacer z psem", done: true },
-];
+const getInitialTasks = () => {
+    const tasksFromLocalStorage = localStorage.getItem("tasks");
+    
+    return tasksFromLocalStorage
+        ? JSON.parse(tasksFromLocalStorage)
+        : []
+};
 
 function App() {
     const [hideDone, setHideDone] = useState(false);
-    const [tasks, setTasks] = useState(defaultTasks);
+    const [tasks, setTasks] = useState(getInitialTasks);
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
     const toggleHideDone = () => {
         setHideDone(hideDone => !hideDone);
@@ -42,7 +48,7 @@ function App() {
 
     const addNewTask = (content) => {
         setTasks(tasks => [
-            ...tasks, 
+            ...tasks,
             {
                 content,
                 done: false,
