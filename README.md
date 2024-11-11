@@ -1,14 +1,34 @@
-# Task list
 
-This project demonstrates the visual aspects of a to-do list application without any interactivity or functionality to add, edit, or remove tasks.
+Oto zaktualizowany plik README.md, który uwzględnia wszystkie technologie, których użyłeś w projekcie:
 
- The technologies used are: 
- - HTML;
- - CSS;
- - BEM;
- - JavaScript;
- - React;
- - JSX
+markdown
+Skopiuj kod
+# Task List
+
+This project is a fully interactive to-do list application that allows users to add, complete, and remove tasks. It showcases both functional and visual aspects, with persistent data storage.
+
+## Technologies Used
+
+- **HTML**
+- **CSS** (replaced by `styled-components`)
+- **BEM** – Methodology for class naming (used in initial versions)
+- **JavaScript (ES6+)**
+- **React** – Component-based UI library
+- **JSX** – Syntax extension for JavaScript to write HTML in React
+- **React Hooks** – For managing state and effects (`useState`, `useEffect`, `useRef`)
+- **Custom React Hooks** – `useTasks` for task management and `useCurrentDate` for updating date and time
+- **Styled Components** – Component-level styling with theme support, replacing traditional CSS
+- **localStorage** – For persistent data storage of tasks
+- **ThemeProvider** – Provides consistent theme-based styling across the application using a centralized theme
+
+## Features
+
+- **Add, complete, and remove tasks** with an interactive UI
+- **Persistent task storage** using `localStorage`
+- **Dynamic styling** with `styled-components` for modular and reusable styles
+- **Theming** with `ThemeProvider` for consistent colors and styles across the app
+
+This project is a complete example of a modern React application with modular, maintainable code and responsive design.
 
 ![alt text for screen readers](./public/img/screen.jpg "Homepage")
 
