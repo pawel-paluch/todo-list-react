@@ -1,8 +1,9 @@
-import "./style.css";
-const Container = (props) => (
-    <main className="container">
-        {props.children}
-    </main>
+import { Wrapper } from "./styled";
+
+const Container = ({ children }) => (
+    <Wrapper>
+        {children}
+    </Wrapper>
 );
 
 export default Container;
