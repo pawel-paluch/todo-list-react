@@ -1,31 +1,33 @@
-import { useState } from "react";
-import "./style.css";
+import { useState, useRef } from "react";
+import { StyledForm, Input, Button } from "./styled";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-    
-        if (!newTaskContent || !newTaskContent.trim()) {
+
+        if (!newTaskContent.trim()) {
             return;
         }
-    
+
         addNewTask(newTaskContent.trim());
-        setNewTaskContent(""); // Resetuje pole tekstowe po dodaniu zadania
+        setNewTaskContent("");
+        inputRef.current.focus();
     };
-    
+
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <input 
+        <StyledForm onSubmit={onFormSubmit}>
+            <Input
+                ref={inputRef}
                 value={newTaskContent}
-                className="form__text"
-                type="text" 
-                placeholder="Co jest do zrobienia?" 
-                onChange={(event) => setNewTaskContent(event.target.value)} // Poprawka tutaj
+                type="text"
+                placeholder="Co jest do zrobienia?"
+                onChange={(event) => setNewTaskContent(event.target.value)}
             />
-            <button className="form__button">Dodaj zadanie</button>
-        </form>
+            <Button type="submit">Dodaj zadanie</Button>
+        </StyledForm>
     );
 };
 
