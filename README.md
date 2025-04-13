@@ -1,8 +1,3 @@
-
-Oto zaktualizowany plik README.md, który uwzględnia wszystkie technologie, których użyłeś w projekcie:
-
-markdown
-Skopiuj kod
 # Task List
 
 This project is a fully interactive to-do list application that allows users to add, complete, and remove tasks. It showcases both functional and visual aspects, with persistent data storage.
@@ -15,8 +10,10 @@ This project is a fully interactive to-do list application that allows users to 
 - **JavaScript (ES6+)**
 - **React** – Component-based UI library
 - **JSX** – Syntax extension for JavaScript to write HTML in React
-- **React Hooks** – For managing state and effects (`useState`, `useEffect`, `useRef`)
-- **Custom React Hooks** – `useTasks` for task management and `useCurrentDate` for updating date and time
+- **React Hooks** – For managing component logic (`useEffect`, `useRef`)
+- **Redux Toolkit** – Centralized state management for tasks and UI state (e.g. hiding completed tasks)
+- **React-Redux** – Connects Redux with React using `useSelector` and `useDispatch`
+- **Custom React Hooks** – `useCurrentDate` for displaying dynamic date and time
 - **Styled Components** – Component-level styling with theme support, replacing traditional CSS
 - **localStorage** – For persistent data storage of tasks
 - **ThemeProvider** – Provides consistent theme-based styling across the application using a centralized theme
