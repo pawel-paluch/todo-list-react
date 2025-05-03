@@ -26,6 +26,9 @@ export const Title = styled.h2`
 `;
 
 export const Body = styled.div`
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.3em;
     margin: 0;
+    padding: 20px;
 `;
