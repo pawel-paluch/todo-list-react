@@ -3,29 +3,35 @@
 This project is a fully interactive to-do list application that allows users to add, complete, and remove tasks. It showcases both functional and visual aspects, with persistent data storage.
 
 ## Technologies Used
-
 - **HTML**
 - **CSS** (replaced by `styled-components`)
 - **BEM** – Methodology for class naming (used in initial versions)
 - **JavaScript (ES6+)**
 - **React** – Component-based UI library
 - **JSX** – Syntax extension for JavaScript to write HTML in React
-- **React Hooks** – For managing component logic (`useEffect`, `useRef`)
+- **React Hooks** – For managing component logic (`useEffect`, `useRef`, `useParams`, `useLocation`)
 - **Redux Toolkit** – Centralized state management for tasks and UI state (e.g. hiding completed tasks)
 - **React-Redux** – Connects Redux with React using `useSelector` and `useDispatch`
-- **Custom React Hooks** – `useCurrentDate` for displaying dynamic date and time
+- **Redux-Saga** – Handles side effects like asynchronous fetching of example tasks
+- **React Router (v5)** – Routing and URL management with `HashRouter`
+- **Custom React Hooks** – `useCurrentDate`, `useQueryParameter`, `useReplaceQueryParameter`
 - **Styled Components** – Component-level styling with theme support, replacing traditional CSS
-- **localStorage** – For persistent data storage of tasks
 - **ThemeProvider** – Provides consistent theme-based styling across the application using a centralized theme
+- **localStorage** – For persistent data storage of tasks between sessions
+
 
 ## Features
-
 - **Add, complete, and remove tasks** with an interactive UI
 - **Persistent task storage** using `localStorage`
+- **Asynchronous task fetching** via Redux-Saga from a local JSON file
+- **URL-based filtering** – tasks can be filtered by query string (e.g. `?szukaj=abc`)
+- **Task details page** – accessible via dynamic routes like `/zadania/123`
+- **Navigation with React Router** using `HashRouter`
 - **Dynamic styling** with `styled-components` for modular and reusable styles
 - **Theming** with `ThemeProvider` for consistent colors and styles across the app
 
 This project is a complete example of a modern React application with modular, maintainable code and responsive design.
+
 
 ![alt text for screen readers](./public/img/screen.jpg "Homepage")
 
