@@ -21,6 +21,7 @@ export const Button = styled.button`
     &:hover {
         filter: brightness(110%);
         transform: scale(1.1);
+        cursor: pointer;
     }
 
     &:active {
